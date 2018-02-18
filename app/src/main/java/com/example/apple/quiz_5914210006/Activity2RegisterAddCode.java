@@ -38,6 +38,11 @@ public class Activity2RegisterAddCode extends AppCompatActivity {
                     etAdd.requestFocus();
                     t.show();
                 }
+                else if(code.length() < 3){
+                    Toast t = Toast.makeText(con,"Please input 3 character length.Please try again !!!",Toast.LENGTH_SHORT);
+                    etAdd.requestFocus();
+                    t.show();
+                }
                 else {
 
                     boolean isSuccess = manage.registerUser(code);

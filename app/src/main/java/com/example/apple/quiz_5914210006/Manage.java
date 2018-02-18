@@ -9,7 +9,7 @@ import android.text.TextUtils;
  */
 
 public class Manage {
-    private final String Key_username = "code";
+    private final String Key_code = "code";
 
     private SharedPreferences sharedPref;
     private SharedPreferences.Editor editor;
@@ -20,7 +20,7 @@ public class Manage {
     }
 
     public boolean checkLoginValidate(String code){
-        String realCode = sharedPref.getString(Key_username,"");
+        String realCode = sharedPref.getString(Key_code,"");
 
 
         if((!TextUtils.isEmpty(code)) && code.equals(realCode)){
@@ -35,7 +35,7 @@ public class Manage {
             return false;
         }
 
-        editor.putString(Key_username,code);
+        editor.putString(Key_code,code);
         return editor.commit();
     }
 }

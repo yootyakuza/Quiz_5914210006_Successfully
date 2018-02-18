@@ -30,10 +30,6 @@ public class Activity3HasCode extends AppCompatActivity {
         np3 = (NumberPicker)findViewById(R.id.numberPicker3);
         btOK = (Button)findViewById(R.id.butOk);
 
-        final String[] data = {"0","1","2","3","4","5","6","7","8","9"};
-        final String[] data2 = {"0","1","2","3","4","5","6","7","8","9"};
-        final String[] data3 = {"0","1","2","3","4","5","6","7","8","9"};
-
 
         np1.setMaxValue(9);
         np1.setMinValue(0);
@@ -74,7 +70,6 @@ public class Activity3HasCode extends AppCompatActivity {
                 String n2 = Integer.toString(num2);
                 String n3 = Integer.toString(num3);
                 String code = n1 + n2 + n3;
-                //String code = User.getText().toString().trim();//รอแก้โดยได้จากการรวมจากข้อมูลทั้ง สามของ numberpicker
 
 
                     boolean isSuccess = manage.checkLoginValidate(code);
